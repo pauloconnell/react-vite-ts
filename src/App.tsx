@@ -5,6 +5,8 @@ import './App.css';
 import UserProfile from './components/UserProfile';
 import Counter from './components/Counter';
 import RefExample from './components/RefExample';
+import EventHandlerForm from './eventHandlers/EventHandlerForm';
+import CustomHookExample from './components/CustomHookComponent';
 
 function App() {
    const [count, setCount] = useState(0);
@@ -24,6 +26,8 @@ function App() {
                <img src={reactLogo} className="logo react" alt="React logo" />
             </a>
          </div>
+         <CustomHookExample />
+         
          <h1>My User Directory</h1>
          <UserProfile
             name="Alice Johnson"
@@ -47,8 +51,13 @@ function App() {
          />
          <Counter initialCount={10} />
          <Counter /> {/* Uses default initialCount of 0 */}
-
            <RefExample />
+
+           <EventHandlerForm />
+
+
+
+
          <hr></hr>
          <div className="card">
             <button onClick={() => setCount((count) => count + 1)}>
